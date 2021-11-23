@@ -1,0 +1,86 @@
+.searchPage__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 100;
+  padding: 25px;
+  padding-bottom: 0;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__right > .MuiAvatar-circular {
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+}
+.searchPage__logo {
+  height: 30px;
+  object-fit: contain;
+  margin-right: 50px;
+}
+.searchPage__headerBody > .search > .search__input {
+  margin-top: 0;
+  max-width: 700px;
+  margin: unset;
+}
+.searchPage__options {
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin-top: 1.5rem;
+  /* padding-bottom: 0.5rem; */
+  border-bottom: 1px solid whitesmoke;
+  position: relative;
+}
+.searchPage__optionsLeft,
+.searchPage__optionsright {
+  display: flex;
+}
+.searchPage__optionsLeft {
+  margin-left: 170px;
+  width: 100%;
+  max-width: 640px;
+}
+.searchPage__optionsLeft .searchPage__option {
+  display: flex;
+  align-items: center;
+  margin-right: 1.4rem;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+.searchPage__option.active:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #4285f4;
+  width: 100%;
+}
+.searchPage__option.active > a {
+  color: #4285f4 !important;
+}
+
+.searchPage__optionsLeft .searchPage__option > a {
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: gray;
+  margin-left: 0.3rem;
+}
+.searchPage__optionsRight > a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 0.8rem;
+  color: gray;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}

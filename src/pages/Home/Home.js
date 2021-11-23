@@ -26,7 +26,7 @@ const Home = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
           alt=""
         />
-        <Search hideButtons />
+        <Search />
       </div>
     </div>
   );

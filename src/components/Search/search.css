@@ -9,6 +9,7 @@
   margin-top: 40px;
   border-radius: 70px;
   transition: 0.3s ease;
+  margin-bottom: 30px;
 }
 .search__input:hover {
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 3px;
@@ -28,7 +29,6 @@
   font-size: 1rem;
 }
 .search__buttons {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
