@@ -22,6 +22,7 @@ const SearchPage = () => {
   // const data = useGoogleSearch(term);
 
   const data = response;
+  console.log(data);
   return (
     <div className="searchPage">
       <div className="searchPage__header">
@@ -83,10 +84,26 @@ const SearchPage = () => {
         </div>
       </div>
       {true && (
-        <div className="searchPage__result">
+        <div className="searchPage__results">
           <p className="searchPage__resultCount">
-            About 300000 results (0.3 seconds) for Tesla
+            About {data?.searchInformation.formattedTotalResults} results (
+            {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
+
+          {data?.items.map((item) => (
+            <div className="searchPage__result">
+              <a href={item.link} className="result__header">
+                <span>{item.link}</span>
+                <MoreVertIcon fontSize="small" />
+              </a>
+              <div className="result__title">
+                <a href={item.link}>
+                  <p>{item.title}</p>
+                </a>
+                <p className="result__snippet">{item.snippet}</p>
+              </div>
+            </div>
+          ))}
         </div>
       )}
     </div>
