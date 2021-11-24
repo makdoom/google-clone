@@ -3,7 +3,6 @@ import { useStateValue } from "../../StateProvider";
 import useGoogleSearch from "../../useGoogleSearch";
 import SettingsIcon from "@material-ui/icons/Settings";
 import AppsIcon from "@material-ui/icons/Apps";
-import response from "../../response.json";
 import "./searchPage.css";
 import { Link } from "react-router-dom";
 import Search from "../../components/Search/Search";
@@ -18,10 +17,8 @@ import MovieIcon from "@material-ui/icons/Movie";
 
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateValue();
-  // Live API call
-  // const data = useGoogleSearch(term);
+  const data = useGoogleSearch(term);
 
-  const data = response;
   console.log(data);
   return (
     <div className="searchPage">
@@ -90,8 +87,8 @@ const SearchPage = () => {
             {data?.searchInformation.formattedSearchTime} seconds) for {term}
           </p>
 
-          {data?.items.map((item) => (
-            <div className="searchPage__result">
+          {data?.items.map((item, index) => (
+            <div className="searchPage__result" key={index}>
               <a href={item.link} className="result__header">
                 <span>{item.link}</span>
                 <MoreVertIcon fontSize="small" />
